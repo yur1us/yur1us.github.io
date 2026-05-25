@@ -1,0 +1,41 @@
+title: "Iurii Pivnenco"
+name: "Iurii Pivnenco"
+description: "System Administrator"
+url: "https://yur1us.github.io"
+repository: "yur1us/yur1us.github.io"
+
+# Minimal Mistakes Theme Settings
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "dark" # Available skins: air, aqua, archive, dark, dirt, contrast, neon, plum, sunrise
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-include-cache
+
+# Author Profile Settings (Left Sidebar)
+author:
+  name: "Iurii Pivnenco"
+  avatar: "https://github.com/yur1us.png"
+  bio: "System Administrator & Network Engineer. Specializing in network infrastructure management, automation, and monitoring."
+  location: "Chisinau, Moldova"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/iurii-pivnenco"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/yur1us"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:iurii.pivnenco@gmail.com"
+
+# Default Page Settings
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: "single"
+      author_profile: true
