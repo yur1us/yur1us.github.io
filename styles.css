@@ -1,0 +1,246 @@
+/* Основные настройки темы */
+:root {
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #7f8c8d;
+    --accent: #2980b9;
+    --accent-hover: #3498db;
+    --border-color: #e2e8f0;
+}
+
+/* Автоматическая темная тема (если у пользователя включена в ОС) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a24;
+        --card-bg: #242530;
+        --text-main: #f5f6fa;
+        --text-muted: #a4b0be;
+        --accent: #3498db;
+        --accent-hover: #54a0ff;
+        --border-color: #323446;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили шапки */
+.hero {
+    background: linear-gradient(135deg, #1e272e 0%, #2c3e50 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 4px solid var(--accent);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.social-links {
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--accent-hover);
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-download:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Карточки секций */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+.card h2 i {
+    margin-right: 10px;
+}
+
+/* Сетка навыков */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.skill-category ul {
+    list-style-type: none;
+}
+
+.skill-category li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+    color: var(--text-muted);
+}
+
+.skill-category li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Опыт работы таймлайн */
+.timeline-item {
+    margin-bottom: 20px;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.timeline-header h4 {
+    font-size: 1.2rem;
+}
+
+.timeline-item .date {
+    background-color: var(--border-color);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.company {
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.timeline-item ul {
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+.timeline-item li {
+    margin-bottom: 5px;
+}
+
+/* Блоки проектов */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.project-box {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 6px;
+    background-color: var(--bg-color);
+}
+
+.project-box h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.project-box p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .timeline-item .date {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
