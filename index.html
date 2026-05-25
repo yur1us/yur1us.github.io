@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме | Network Engineer & Sysadmin</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключаем иконки FontAwesome для соцсетей -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Шапка / Приветствие -->
+    <header class="hero">
+        <div class="container">
+            <h1>Ваше Имя и Фамилия</h1>
+            <p class="subtitle">Network Engineer / System Administrator</p>
+            <div class="social-links">
+                <a href="https://github.com/ВАШ_ЛОГИН" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/ВАШ_ПРОФИЛЬ" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://t.me/ВАШ_ТЕЛЕГРАМ" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+            <!-- Ссылка на скачивание PDF (положите resume.pdf в ту же папку) -->
+            <a href="resume.pdf" class="btn-download" download><i class="fas fa-file-pdf"></i> Скачать CV (PDF)</a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- О себе -->
+        <section class="card">
+            <h2><i class="fas fa-user"></i> О себе</h2>
+            <p>Опытный ИТ-специалист, специализирующийся на проектировании, развертывании и поддержке сетевой инфраструктуры операторского уровня (ISP) и системной автоматизации. Имею глубокие знания в области мониторинга, безопасности сетей и управления многовендорными средами.</p>
+        </section>
+
+        <!-- Навыки (Стек) -->
+        <section class="card">
+            <h2><i class="fas fa-tools"></i> Навыки & Технологии</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Сети & Железо</h3>
+                    <ul>
+                        <li>Cisco (Catalyst, Nexus), Juniper (MX, GPON OLT), MikroTik</li>
+                        <li>Маршрутизация и коммутация (BGP, OSPF, STP, VLAN)</li>
+                        <li>Безопасность: DHCP Snooping, DAI, Port Security</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Мониторинг & Логи</h3>
+                    <ul>
+                        <li>Zabbix (включая LLD, API, триггеры)</li>
+                        <li>Grafana (визуализация метрик, хитмапы)</li>
+                        <li>Graylog (централизованный сбор логов)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Автоматизация & Devops</h3>
+                    <ul>
+                        <li>Bash, Python, SQL (автоматизация отчетов, бэкапов)</li>
+                        <li>Linux (Ubuntu, Debian, CentOS), Nginx, Docker</li>
+                        <li>Стриминг и видео: Flussonic, ZoneMinder</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Опыт работы -->
+        <section class="card">
+            <h2><i class="fas fa-briefcase"></i> Опыт работы</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h4>Senior Network Engineer / System Administrator</h4>
+                    <span class="date">2025 — Настоящее время</span>
+                </div>
+                <p class="company">Интернет-провайдер (ISP)</p>
+                <ul>
+                    <li>Управление и масштабирование сетевой инфраструктуры оператора связи.</li>
+                    <li>Миграция магистральных аплинков и модернизация оборудования.</li>
+                    <li>Разработка и поддержка комплексных систем мониторинга ИТ-инфраструктуры.</li>
+                    <li>Автоматизация рутинных задач администрирования, резервного копирования конфигураций и интеграция систем мониторинга с таск-менеджерами через API.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Проекты / Портфолио -->
+        <section class="card">
+            <h2><i class="fas fa-code"></i> Избранные ИТ-проекты</h2>
+            <div class="projects-grid">
+                
+                <div class="project-box">
+                    <h4>Network Backup Automation</h4>
+                    <p>Скрипт для параллельного сбора, архивации и ротации конфигураций сетевого оборудования (Cisco, Ubiquiti) с использованием SNMP и CLI.</p>
+                    <span class="tech-tag">Bash</span> <span class="tech-tag">SNMP</span>
+                </div>
+
+                <div class="project-box">
+                    <h4>Zabbix Ticketing Integration</h4>
+                    <p>Модуль интеграции системы мониторинга с внутренней системой управления задачами для автоматического создания инцидентов при сбоях.</p>
+                    <span class="tech-tag">Python</span> <span class="tech-tag">API</span>
+                </div>
+
+                <div class="project-box">
+                    <h4>Infrastructure Monitoring Dashboard</h4>
+                    <p>Проектирование дашбордов в Grafana для визуализации утилизации ресурсов, включая графики сетевых интерфейсов и метрики видео-декодеров.</p>
+                    <span class="tech-tag">Zabbix</span> <span class="tech-tag">Grafana</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026. Разработано и размещено на GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
