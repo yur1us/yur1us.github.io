@@ -1,109 +1,175 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме | Network Engineer & Sysadmin</title>
+    <title>Resume | Iurii Pivnenco</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Подключаем иконки FontAwesome для соцсетей -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Шапка / Приветствие -->
     <header class="hero">
         <div class="container">
-            <h1>Ваше Имя и Фамилия</h1>
-            <p class="subtitle">Network Engineer / System Administrator</p>
+            <h1>Iurii Pivnenco</h1>
+            <p class="subtitle">System Administrator </p>
             <div class="social-links">
-                <a href="https://github.com/ВАШ_ЛОГИН" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://linkedin.com/in/ВАШ_ПРОФИЛЬ" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://t.me/ВАШ_ТЕЛЕГРАМ" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-                <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/yur1us" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/iurii-pivnenco" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:iurii.pivnenco@gmail.com"><i class="fas fa-envelope"></i> Email</a>
             </div>
-            <!-- Ссылка на скачивание PDF (положите resume.pdf в ту же папку) -->
-            <a href="resume.pdf" class="btn-download" download><i class="fas fa-file-pdf"></i> Скачать CV (PDF)</a>
+            <a href="CV_Pivnenco_Iurii.pdf" class="btn-download" download><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
         </div>
     </header>
 
     <main class="container">
         
-        <!-- О себе -->
         <section class="card">
-            <h2><i class="fas fa-user"></i> О себе</h2>
-            <p>Опытный ИТ-специалист, специализирующийся на проектировании, развертывании и поддержке сетевой инфраструктуры операторского уровня (ISP) и системной автоматизации. Имею глубокие знания в области мониторинга, безопасности сетей и управления многовендорными средами.</p>
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <p>System Administrator and Network Engineer with hands-on experience in multi-vendor network environments, infrastructure process automation, and deploying carrier-grade (ISP) monitoring solutions.</p>
         </section>
 
-        <!-- Навыки (Стек) -->
         <section class="card">
-            <h2><i class="fas fa-tools"></i> Навыки & Технологии</h2>
+            <h2><i class="fas fa-tools"></i> Skills & Technologies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Сети & Железо</h3>
+                    <h3>Networking & Hardware</h3>
                     <ul>
-                        <li>Cisco (Catalyst, Nexus), Juniper (MX, GPON OLT), MikroTik</li>
-                        <li>Маршрутизация и коммутация (BGP, OSPF, STP, VLAN)</li>
-                        <li>Безопасность: DHCP Snooping, DAI, Port Security</li>
+                        <li>Cisco (Catalyst, Nexus), Juniper (MX, GPON OLT), MikroTik [cite: 31, 39, 40]</li>
+                        <li>Ubiquiti (UniFi), TP-Link (Omada), HP [cite: 25, 40, 41]</li>
+                        <li>Network redundancy (VRRP, STP, LACP) [cite: 41]</li>
+                        <li>L2/L3 administration, FTTB & GPON [cite: 33, 42, 43]</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Мониторинг & Логи</h3>
+                    <h3>Systems & Monitoring</h3>
                     <ul>
-                        <li>Zabbix (включая LLD, API, триггеры)</li>
-                        <li>Grafana (визуализация метрик, хитмапы)</li>
-                        <li>Graylog (централизованный сбор логов)</li>
+                        <li>Linux (Lubuntu, Debian, Ubuntu), Active Directory, Group Policy [cite: 11, 31, 39]</li>
+                        <li>Zabbix (LLD development, custom triggers, API), Grafana, Graylog [cite: 39, 44]</li>
+                        <li>Proxmox, Docker, Podman [cite: 40, 41]</li>
+                        <li>Mail, Web, DB, and Storage services [cite: 42, 43]</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Автоматизация & Devops</h3>
+                    <h3>Automation & Infrastructure</h3>
                     <ul>
-                        <li>Bash, Python, SQL (автоматизация отчетов, бэкапов)</li>
-                        <li>Linux (Ubuntu, Debian, CentOS), Nginx, Docker</li>
-                        <li>Стриминг и видео: Flussonic, ZoneMinder</li>
+                        <li>Bash and PowerShell scripting [cite: 39]</li>
+                        <li>Configuration automation & backup planning [cite: 34, 35, 44]</li>
+                        <li>PDQ Inventory & Deploy [cite: 41]</li>
+                        <li>Hosting platforms (Plesk, ISP Manager, PowerDNSAdmin) [cite: 44]</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Telephony & Video Streaming</h3>
+                    <ul>
+                        <li>IP Telephony (Elastix, FreePBX) [cite: 11, 16]</li>
+                        <li>VSaaS & CCTV (Flussonic Watcher, Hikvision, TRASSIR) [cite: 12, 27, 37]</li>
+                        <li>Access Control Systems (Sigur / Sphinx) [cite: 12, 16]</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Опыт работы -->
         <section class="card">
-            <h2><i class="fas fa-briefcase"></i> Опыт работы</h2>
+            <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
             
             <div class="timeline-item">
                 <div class="timeline-header">
-                    <h4>Senior Network Engineer / System Administrator</h4>
-                    <span class="date">2025 — Настоящее время</span>
+                    <h4>System Administrator</h4>
+                    <span class="date">2023 — Present</span>
                 </div>
-                <p class="company">Интернет-провайдер (ISP)</p>
+                <p class="company">ARAX — Chisinau, Moldova</p>
                 <ul>
-                    <li>Управление и масштабирование сетевой инфраструктуры оператора связи.</li>
-                    <li>Миграция магистральных аплинков и модернизация оборудования.</li>
-                    <li>Разработка и поддержка комплексных систем мониторинга ИТ-инфраструктуры.</li>
-                    <li>Автоматизация рутинных задач администрирования, резервного копирования конфигураций и интеграция систем мониторинга с таск-менеджерами через API.</li>
+                    <li>Administering Cisco, Juniper, MikroTik equipment, and Linux servers[cite: 31].</li>
+                    <li>Monitoring IT infrastructure and organizing robust backup solutions[cite: 32, 34].</li>
+                    <li>Developing scripts to automate configurations, updates, and monitoring[cite: 35].</li>
+                    <li>Deploying and configuring VSaaS solutions based on Flussonic Watcher[cite: 37].</li>
+                    <li>Performing functional and load testing of FTTB/GPON network equipment[cite: 33].</li>
+                    <li>Maintaining technical and organizational documentation[cite: 36].</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h4>System Administrator</h4>
+                    <span class="date">2022 — 2023</span>
+                </div>
+                <p class="company">Continent — Chisinau, Moldova</p>
+                <ul>
+                    <li>Administering the company's network and IT infrastructure (Windows Server/Workstation, Wi-Fi Ubiquiti UniFi, office equipment)[cite: 25].</li>
+                    <li>Managing local area network operations, technical support, and user assistance[cite: 26, 27].</li>
+                    <li>Administering and maintaining the Hikvision video surveillance system[cite: 27].</li>
+                    <li>Supporting IP telephony via FreePBX[cite: 25].</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h4>System Administrator</h4>
+                    <span class="date">2020 — 2023</span>
+                </div>
+                <p class="company">Elince — Chisinau, Moldova</p>
+                <ul>
+                    <li>Installing, configuring, and supporting Windows-based workstations, thin clients, and Windows servers[cite: 16].</li>
+                    <li>Maintaining CCTV systems, Access Control Systems (ACS), and IP telephony via FreePBX[cite: 16].</li>
+                    <li>Troubleshooting local area networks and documenting work processes[cite: 19, 20, 21].</li>
+                    <li>Handling procurement and commissioning of retail equipment[cite: 21].</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h4>System Administrator</h4>
+                    <span class="date">04/2019 — 10/2019</span>
+                </div>
+                <p class="company">Casino Nuovo — Chisinau, Moldova</p>
+                <ul>
+                    <li>Administering the network and IT infrastructure of the enterprise (over 40 stations running Lubuntu and Windows)[cite: 11].</li>
+                    <li>Supporting IP telephony running on Elastix[cite: 11].</li>
+                    <li>Administering and maintaining the TRASSIR video surveillance system and Sigur (Sphinx) access control systems[cite: 12].</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Проекты / Портфолио -->
         <section class="card">
-            <h2><i class="fas fa-code"></i> Избранные ИТ-проекты</h2>
+            <h2><i class="fas fa-graduation-cap"></i> Education & Training</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h4>Technical University of Moldova (UTM)</h4>
+                    <span class="date">2018 — 2022</span>
+                </div>
+                <p class="company">Licență | Field of study: Microelectronica si nanotehnologii [cite: 51, 52, 53]</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h4>Centrul de Excelenţă în Energetică și Electronică (CEEE)</h4>
+                    <span class="date">2014 — 2018</span>
+                </div>
+                <p class="company">Vocational secondary education | Field of study: Calculatoare [cite: 48, 49, 52]</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-code"></i> Featured IT Projects</h2>
             <div class="projects-grid">
                 
                 <div class="project-box">
                     <h4>Network Backup Automation</h4>
-                    <p>Скрипт для параллельного сбора, архивации и ротации конфигураций сетевого оборудования (Cisco, Ubiquiti) с использованием SNMP и CLI.</p>
+                    <p>Script for parallel data collection, archiving, and rotation of configurations for network devices (Cisco, Ubiquiti) using SNMP and CLI.</p>
                     <span class="tech-tag">Bash</span> <span class="tech-tag">SNMP</span>
                 </div>
 
                 <div class="project-box">
                     <h4>Zabbix Ticketing Integration</h4>
-                    <p>Модуль интеграции системы мониторинга с внутренней системой управления задачами для автоматического создания инцидентов при сбоях.</p>
+                    <p>Integration module between the monitoring platform and internal task management system to automate ticket creation upon infrastructure alerts.</p>
                     <span class="tech-tag">Python</span> <span class="tech-tag">API</span>
                 </div>
 
                 <div class="project-box">
                     <h4>Infrastructure Monitoring Dashboard</h4>
-                    <p>Проектирование дашбордов в Grafana для визуализации утилизации ресурсов, включая графики сетевых интерфейсов и метрики видео-декодеров.</p>
+                    <p>Designed comprehensive Grafana dashboards to monitor resource utilization, network interface graphs, and video transcoding encoder/decoder metrics.</p>
                     <span class="tech-tag">Zabbix</span> <span class="tech-tag">Grafana</span>
                 </div>
 
@@ -113,7 +179,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026. Разработано и размещено на GitHub Pages.</p>
+        <p>&copy; 2026. Designed and hosted on GitHub Pages.</p>
     </footer>
 
 </body>
