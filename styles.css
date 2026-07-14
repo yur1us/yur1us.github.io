@@ -10,6 +10,7 @@
      --text     #E7ECF3  primary text
      --muted    #8593AA  secondary text
    Type: IBM Plex Mono (display / labels / data) + Inter (body)
+   Works with the existing markup as-is — no new elements required.
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
@@ -20,7 +21,6 @@
   --panel-hover: #16223a;
   --line: #1e2a42;
   --signal: #34d399;
-  --signal-dim: rgba(52, 211, 153, 0.15);
   --warn: #f5a623;
   --text: #e7ecf3;
   --muted: #8593aa;
@@ -84,34 +84,23 @@ body::before {
   margin: 0 0 8px;
   letter-spacing: -0.02em;
   color: var(--text);
+  position: relative;
+  padding-left: 20px;
 }
 
-.hero .subtitle {
-  font-family: var(--sans);
-  color: var(--muted);
-  font-size: 1.05rem;
-  margin: 0 0 20px;
-}
-
-/* status line — a health-check row, like a monitored host */
-.status-line {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  color: var(--signal);
-  margin-bottom: 6px;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
+/* status dot grown from the heading itself — no markup needed */
+.hero h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--signal);
   box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
   animation: pulse 2.2s infinite;
-  flex-shrink: 0;
 }
 
 @keyframes pulse {
@@ -120,15 +109,16 @@ body::before {
   100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
 }
 
-.uptime {
+.hero .subtitle {
   font-family: var(--mono);
-  font-size: 0.8rem;
   color: var(--muted);
-  margin-bottom: 28px;
+  font-size: 1rem;
+  margin: 0 0 28px;
 }
 
-.uptime span {
-  color: var(--warn);
+.hero .subtitle::before {
+  content: "// ";
+  color: var(--signal);
 }
 
 .social-links {
@@ -199,20 +189,6 @@ main.container {
   margin-bottom: 44px;
 }
 
-.eyebrow {
-  display: block;
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  color: var(--signal);
-  letter-spacing: 0.04em;
-  margin-bottom: 8px;
-}
-
-.eyebrow::before {
-  content: "// ";
-  color: var(--muted);
-}
-
 .card h2 {
   font-family: var(--mono);
   font-size: 1.3rem;
@@ -253,6 +229,10 @@ main.container {
   background: var(--panel-hover);
 }
 
+/* alternate the left accent so the grid doesn't read as four identical blocks */
+.skill-category:nth-child(2) { border-left-color: var(--warn); }
+.skill-category:nth-child(4) { border-left-color: var(--warn); }
+
 .skill-category h3 {
   font-family: var(--mono);
   font-size: 0.95rem;
@@ -276,19 +256,9 @@ main.container {
   color: var(--signal);
 }
 
-/* small module tag, top-right of each skill card — like a Zabbix host-group chip */
-.skill-category[data-tag]::after {
-  content: attr(data-tag);
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 2px 6px;
-  letter-spacing: 0.04em;
+.skill-category:nth-child(2) li::marker,
+.skill-category:nth-child(4) li::marker {
+  color: var(--warn);
 }
 
 /* ---------- Timeline (experience / education) ---------- */
@@ -316,7 +286,9 @@ main.container {
   border: 2px solid var(--muted);
 }
 
-.timeline-item.current::before {
+/* the most recent role in Work Experience is always the first .timeline-item
+   in its section — highlight it as the "current" node without touching markup */
+.card:nth-of-type(2) .timeline-item:first-child::before {
   border-color: var(--signal);
   background: var(--signal);
   box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
@@ -368,18 +340,6 @@ main.container {
   color: var(--line);
 }
 
-/* ---------- Footer ---------- */
-
-.site-footer {
-  text-align: center;
-  padding: 30px 24px 60px;
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  color: var(--muted);
-  position: relative;
-  z-index: 1;
-}
-
 /* ---------- Responsive ---------- */
 
 @media (max-width: 640px) {
@@ -412,8 +372,8 @@ a:focus-visible,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .status-dot,
-  .timeline-item.current::before {
+  .hero h1::before,
+  .card:nth-of-type(2) .timeline-item:first-child::before {
     animation: none;
   }
 }
